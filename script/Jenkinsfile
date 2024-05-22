@@ -6,7 +6,7 @@ pipeline{
    stages{
     stage('sonar-scan'){
         steps{
-            withSonarQubeEnv('somarQube'){
+            withSonarQubeEnv('sonarQube'){
 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=oakv3250_Geo-Solutions'
             }
         
